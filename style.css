@@ -94,7 +94,7 @@ h2{
 	cursor: pointer;
 	box-shadow: 0 0.4rem 1.4rem 0 rgba(97, 13, 38);
 	transition: transform 150ms;
-	transform: scale(3);
+	transform: scale(2.5);
 }  
 .btn[disabled]:hover{
 	cursor: not-allowed;
@@ -108,4 +108,8 @@ h2{
 #score-btn:hover{
 	box-shadow: 0 0.4rem 1.4rem 0 rgba(159, 82, 126, 0.5);
 	transform: scale(1.4);
+}
+.fa-crown{
+	font-size: 2rem;
+	margin-left: 1rem;
 }
