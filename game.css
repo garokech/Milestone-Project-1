@@ -1,6 +1,7 @@
-body{
-    color: #fff;
-}
+/* body{
+    color: #D8A994;
+    text-shadow: 0 0 3px #000000, 0 0 5px #9F5C3C;
+} */
 .choice-container{
     display: flex;
     margin-bottom: 0.8rem;
@@ -13,31 +14,33 @@ body{
 
 .choice-container:hover{
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgb(162, 41, 78);
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(176,79,56);
     transform: scale(1.02);
     transform: transform 100ms;
 }
 
 .choice-prefix{
     padding: 2rem;
-    color: #e75ca6
+    color: #9f5c3c
 }
 
 .choice-text{
     padding: 2rem;
     width: 100%;
-    color: #ea81b9fd ;
+    color: #c18566 ;
 }
 .correct{
     background: linear-gradient(32deg, rgb(189,193,131)0%, rgba(182,189,82)100%);
 } 
 .incorrect{
-    background: linear-gradient(32deg, rgba(174, 88, 75)0%, rgb(174, 88, 75)100%);
+    background: linear-gradient(32deg, rgb(162, 64, 49)0%, rgb(134, 39, 25)100%);
 }
 
 #hud{
     display: flex;
     justify-content: space-between;
+    color: #D8A994;
+    text-shadow: 0 0 3px #4D2A22, 0 0 5px #9F5C3C;
 }
 
 .hud-prefix{
@@ -52,7 +55,7 @@ body{
 #progressBar{
     width: 20rem;
     height: 3rem;
-    border:0.2rem solid rgba(77,85,61);
+    border:0.2rem solid rgba(193,216,147);
     margin-top: 2rem;
     border-radius: 50px; 
     overflow:hidden;
@@ -60,6 +63,12 @@ body{
 
 #progressBarFull{
     height: 100%;
-    background: rgba(77,85,61);
+    background: rgb(193, 216, 147);
     width: 0%;
+}
+
+#containerTwo{
+    background-position: 75% 20%;
+    /* background-repeat: no-repeat; */
+    background-size: 50rem;
 }

@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 :root{
-	background-color:#A39388;
+	/* background-color:#a3938820; */
+	/* background-color: #a39388; */
+	background-color: #FFFFFF ;
 }
 *{
 	box-sizing: border-box;
@@ -13,14 +15,14 @@
 
 h1{
 	font-size: 5.4rem;
-	color: rgb(255, 255, 255);
+	/* color: rgb(255, 255, 255); */
+	color: white;
 	margin-bottom: 5rem;
 }
 h2{
 	font-size: 4.2rem;
 	margin-bottom: 4rem;
 }
-
 .container{
 	width: 100vw;
 	height: 100vh;
@@ -70,7 +72,7 @@ h2{
 }
 .btn:hover{
 	cursor: pointer;
-	box-shadow: 0 0.4rem 1.4rem 0 #868380;
+	box-shadow: 0 0.4rem 1.4rem 0 #958473;
 	/* transition: transform 150ms;
 	transform: scale(2); */
 }  
@@ -146,12 +148,12 @@ h2{
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: #ea81b9fd;
+	color: #FFCB06;
   }
   #titleImg{
 	  border-radius: 50%;
 	  width: 1500px;
-	  height: 1500px;
+	  height: 1200px;
   }
   #Finalbtn{
 	font-size: 2rem;

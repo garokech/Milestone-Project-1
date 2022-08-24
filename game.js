@@ -16,8 +16,9 @@ let questions = [
         choice1:"RHOSLC",
         choice2:"RHOBH",
         choice3:"RHONY",
-        choice4:"RHOC", 
+        choice4:"RHOC",
         answer: 4,
+        image:"https://hips.hearstapps.com/hmg-prod/images/real-housewives-nyc-1620137028.jpg?crop=0.5xw:1xh;center,top&resize=640:*"
     },
     {
         question: 'From the following, who has the most Grammy awards?',
@@ -26,7 +27,8 @@ let questions = [
         choice3:"Lady Gaga",
         choice4:"Bruce Springsteen", 
         answer: 2,
-    },
+        image:"https://66.media.tumblr.com/71658a01f6b19fb32f11694e5f010aa3/tumblr_inline_pmkujpTfa91s9on4d_540.jpg"
+       },
     {
         question: "In the show, 'Friends', how many pages did Rachel write to Ross regarding their relationship?",
         choice1:"4",
@@ -34,15 +36,17 @@ let questions = [
         choice3:"14",
         choice4:"18", 
         answer: 4,
+        image:"https://media.vogue.fr/photos/5d51422c5dc6c20009ca8833/4:3/w_2426,h_1820,c_limit/010_A7A08B18_317.jpg"
     },
     {
-        question: "Which Avenger was able to pick up Thor's Mjolnir?",
-        choice1:"Vision",
-        choice2:"Hulk",
-        choice3:"Iron Man",
-        choice4:"Scarlet Witch", 
+        question: "What song was playing in 'The Sopranos' finale episode?",
+        choice1:"Don't Stop Belivin'",
+        choice2:"Woke Up This Morning",
+        choice3:"Every Breathe You Take",
+        choice4:"Glad Tidings", 
         answer: 1,
-    },
+        image:"https://i.guim.co.uk/img/media/3dc4c4a74fc8d14db65ff38c7c4b37c48a056c29/111_0_3334_2000/master/3334.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=56b28ce41f141e1818a3a439db8c4dca",
+       },
     {
         question: "Who is the oldest Kardashian member?",
         choice1:"Khloé",
@@ -50,6 +54,7 @@ let questions = [
         choice3:"Rob",
         choice4:"Kim", 
         answer: 2,
+        image:"https://deadline.com/wp-content/uploads/2022/07/the-kardashians-hulu-lr-e1650484410899.jpeg"
     },
     {
         question: "What is Nicki Minaj's fanbase called?",
@@ -58,14 +63,17 @@ let questions = [
         choice3:"Barbs",
         choice4:"Navy", 
         answer: 3,
+        image:"https://static01.nyt.com/images/2018/07/25/arts/21popcast/21popcast-superJumbo.jpg"
+        // image:"https://assets.capitalxtra.com/2015/13/nicki-minaj-with-fans-1427721559-view-0.png"
     },
     {
-        question: "Which Korean artist released 'Gangnam Style' back in 2012?",
-        choice1:"BTS",
-        choice2:"Psy",
-        choice3:"BlackPink",
-        choice4:"Justin Bieber", 
+        question: "What is Paris Hilton's iconic catch phrase?",
+        choice1:"That's fetch.",
+        choice2:"That's hot.",
+        choice3:"Why are you so obsessed with me?",
+        choice4:"Yuh.", 
         answer: 2,
+        image:"https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1688,w_3000,x_0,y_0/dpr_1.5/c_limit,w_1600/fl_lossy,q_auto/v1620332173/210506-Roundtree-ParisHilton-meme-tease_phidal"
     },
     {
         question: "When did 'Star Wars: A New Hope' get released?",
@@ -74,22 +82,26 @@ let questions = [
         choice3:"1980",
         choice4:"1982", 
         answer: 1,
+        // image:"https://images.saymedia-content.com/.image/t_share/MTc1MDkwNTY0OTYwODg4NjQ0/movie-review-star-wars-episode-iv-a-new-hope.png"
+        image:"https://images.theconversation.com/files/3624/original/tatooine.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop"
     },
     {
         question: "Carrie Bradshaw wrote for which newspaper, in the show 'Sex and the City'?",
         choice1:"New York Times",
         choice2:"New York Star",
         choice3:"Harper's Bazaar",
-        choice4:"New Yorkerr", 
+        choice4:"New Yorker", 
         answer: 2,
+        image:"https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/43/1508751226-sex-and-the-city-cast.jpg"
     },
     {
-        question: "What year was it that Janet Jackson had the infamous wardrobe malfunction at the Superbowl?",
-        choice1:"2001",
-        choice2:"2002",
-        choice3:"2003",
-        choice4:"2004", 
+        question: "Which Super Bowl Halftime performance was the most-watched?",
+        choice1:"2012",
+        choice2:"2016",
+        choice3:"2017",
+        choice4:"2015", 
         answer: 4,
+        image:"https://cdn.justjared.com/wp-content/uploads/headlines/2021/02/super-bowl-halftime-show-ranking.jpg"
     }
 ]
 const SCORE_POINTS = 100
@@ -120,11 +132,14 @@ getNewQuestion = () => {
     choices.forEach(choice => {
         const number = choice.dataset['number']
         choice.innerText = currentQuestion["choice" + number]
+        
     })
 
     availableQuestion.splice(questionsIndex, 1)
 
     acceptingAnswers = true
+
+    document.getElementById("containerTwo").style.backgroundImage = "url("+currentQuestion.image+")"
 }
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
