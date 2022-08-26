@@ -64,7 +64,6 @@ let questions = [
         choice4:"Navy", 
         answer: 3,
         image:"https://static01.nyt.com/images/2018/07/25/arts/21popcast/21popcast-superJumbo.jpg"
-        // image:"https://assets.capitalxtra.com/2015/13/nicki-minaj-with-fans-1427721559-view-0.png"
     },
     {
         question: "What is Paris Hilton's iconic catch phrase?",
@@ -82,7 +81,6 @@ let questions = [
         choice3:"1980",
         choice4:"1982", 
         answer: 1,
-        // image:"https://images.saymedia-content.com/.image/t_share/MTc1MDkwNTY0OTYwODg4NjQ0/movie-review-star-wars-episode-iv-a-new-hope.png"
         image:"https://images.theconversation.com/files/3624/original/tatooine.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=675.0&fit=crop"
     },
     {
@@ -104,8 +102,8 @@ let questions = [
         image:"https://cdn.justjared.com/wp-content/uploads/headlines/2021/02/super-bowl-halftime-show-ranking.jpg"
     }
 ]
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 10
+const scorePoints = 100
+const maxQuestions = 10
  
 startGame = () =>{
     questionCounter = 0
@@ -115,15 +113,15 @@ startGame = () =>{
 }
 
 getNewQuestion = () => {
-    if(availableQuestion.length === 0|| questionCounter > MAX_QUESTIONS){
+    if(availableQuestion.length === 0|| questionCounter > maxQuestions){
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign("/end.html")
     }
 
     questionCounter++
-    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
-    progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
+    progressText.innerText = `Question ${questionCounter} of ${maxQuestions}`
+    progressBarFull.style.width = `${(questionCounter/maxQuestions) * 100}%`
 
     const questionsIndex = Math.floor(Math.random() * availableQuestion.length)
     currentQuestion = availableQuestion [questionsIndex]
@@ -152,7 +150,7 @@ choices.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct': 'incorrect'
 
         if(classToApply === "correct") {
-            incrementScore(SCORE_POINTS)
+            incrementScore(scorePoints)
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
