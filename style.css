@@ -3,7 +3,7 @@
 :root{
 	/* background-color:#a3938820; */
 	/* background-color: #a39388; */
-	background-color: #FFFFFF ;
+	background-color: rgb(255, 255, 255) ;
 }
 *{
 	box-sizing: border-box;
@@ -15,14 +15,14 @@
 
 h1{
 	font-size: 5.4rem;
-	/* color: rgb(255, 255, 255); */
-	color: white;
+	color: rgb(255, 255, 255);
 	margin-bottom: 5rem;
 }
-h2{
+/* h2{
 	font-size: 4.2rem;
 	margin-bottom: 4rem;
-}
+} */
+
 .container{
 	width: 100vw;
 	height: 100vh;
@@ -63,7 +63,7 @@ h2{
 	margin-bottom: 1rem;
 	text-decoration: none;
 	color: rgb(28,26,26);
-	background: linear-gradient(90deg,#EDCCB9 0%, #F0EFEB 100%);
+	background: linear-gradient(90deg,rgb(237, 204, 185) 0%, rgb(240, 239, 235) 100%);
 	border-radius: 4px;
 	position: absolute;
 	top: 50%;
@@ -71,8 +71,8 @@ h2{
 	transform: translate(-50%, -50%);
 }
 .btn:hover{
-	cursor: pointer;
-	box-shadow: 0 0.4rem 1.4rem 0 #958473;
+	/* cursor: pointer; */
+	box-shadow: 0 0.4rem 1.4rem 0 rgb(149, 132, 115);
 	/* transition: transform 150ms;
 	transform: scale(2); */
 }  
@@ -140,7 +140,7 @@ h2{
 .fa-home{
 	margin-left: 1rem;
 	font-size: 2rem;
-	color: rgb(28,26,26);
+	color: rgb(163, 147, 135);
 }
 
 .title {
@@ -148,7 +148,8 @@ h2{
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	color: #f3db85;
+	color: rgb(243, 219, 133);
+	text-align: center;
   }
   #titleImg{
 	  border-radius: 50%;
@@ -157,16 +158,23 @@ h2{
   }
   #Finalbtn{
 	font-size: 2rem;
-	padding: 2rem 0;
+	padding: 2rem;
 	width: 20rem;
 	text-align: center;
-	margin-bottom: 1rem;
+	margin-top: 1rem;
 	text-decoration: none;
-	color: rgb(28,26,26);
-	background: linear-gradient(90deg,#EDCCB9 0%, #F0EFEB 100%);
+	color:rgb(0, 0, 0);
+	background: linear-gradient(90deg,rgb(237, 204, 185) 0%, rgb(240, 239, 235) 100%);
 	border-radius: 4px;
 	position: absolute;
-	top: 60%;
+	top: 75%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+
+#finalMessage{
+	font-size: 3rem;
+	margin-bottom: 3rem;
+	/* text-align: center; */
 }

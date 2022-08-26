@@ -21,13 +21,13 @@
 
 .choice-prefix{
     padding: 2rem;
-    color: #9f5c3c
+    color: rgb(159, 92, 60)
 }
 
 .choice-text{
     padding: 2rem;
     width: 100%;
-    color: #c18566 ;
+    color: rgb(193, 133, 102) ;
 }
 .correct{
     background: linear-gradient(32deg, rgb(189,193,131)0%, rgba(182,189,82)100%);
@@ -39,17 +39,21 @@
 #hud{
     display: flex;
     justify-content: space-between;
-    color: #D8A994;
-    text-shadow: 0 0 3px #4D2A22, 0 0 5px #9F5C3C;
+    color: rgb(216, 169, 148);
+    text-shadow: 0 0 3px rgb(77, 42, 34), 0 0 5px rgb(159, 92, 60);
 }
 
 .hud-prefix{
-    text-align: center;
+    text-align: right;
     font-size: 2rem;
+}
+#hud-one{
+        margin-right: 1rem;
 }
 
 .hud-main-text{
     text-align: center;
+    margin-right: 1rem;
 }
 
 #progressBar{
@@ -57,6 +61,7 @@
     height: 3rem;
     border:0.2rem solid rgba(231, 246, 201);
     margin-top: 2rem;
+    margin-left: 0.5rem;
     border-radius: 50px; 
     overflow:hidden;
 }
