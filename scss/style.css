@@ -1,0 +1,76 @@
+.choice-container {
+  display: flex;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  border-radius: 4px;
+  background: rgb(242, 226, 218);
+  font-size: 3rem;
+  min-width: 80rem;
+}
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0 4rem rgb(176, 79, 56);
+  transform: scale(1.02);
+  transform: transform 100ms;
+}
+
+.choice-prefix {
+  padding: 2rem;
+  color: rgb(159, 92, 60);
+}
+
+.choice-text {
+  padding: 2rem;
+  width: 100%;
+  color: rgb(193, 133, 102);
+}
+
+.correct {
+  background: linear-gradient(32deg, rgb(189, 193, 131) 0%, rgb(182, 189, 82) 100%);
+}
+
+.incorrect {
+  background: linear-gradient(32deg, rgb(162, 64, 49) 0%, rgb(134, 39, 25) 100%);
+}
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(216, 169, 148);
+  text-shadow: 0 0 3px rgb(77, 42, 34), 0 0 5px rgb(159, 92, 60);
+}
+
+.hud-prefix {
+  text-align: right;
+  font-size: 2rem;
+}
+
+#hud-one {
+  margin-right: 1rem;
+}
+
+.hud-main-text {
+  text-align: center;
+  margin-right: 1rem;
+}
+
+#progressBar {
+  width: 20rem;
+  height: 3rem;
+  border: 0.2rem solid rgb(231, 246, 201);
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+#progressBarFull {
+  height: 100%;
+  background: rgb(231, 246, 201);
+  width: 0%;
+}
+
+#containerTwo {
+  background-position: 75% 20%;
+  background-size: 50rem;
+}/*# sourceMappingURL=style.css.map */
